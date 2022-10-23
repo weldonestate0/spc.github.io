@@ -79,10 +79,11 @@
                     logoutSPC();
                     var modal = document.getElementById("myModal");
                     modal.style.display = "none";
-					// alert("Data Updated successfully");
+					 alert("Data Updated successfully");
 				})
 				.catch(()=>{
 					// alert("Unsuccessfull, error"+error); 
+                    alert("Data can't be updated due to some error.")
 				});
             }
 
