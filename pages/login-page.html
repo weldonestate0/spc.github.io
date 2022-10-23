@@ -61,8 +61,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   #myModal{
     overflow-y: auto; 
-    background-color: rgb(255, 216, 41);
-  }
+    background-color: rgb(255, 129, 11);
+  } 
+
+  /*Profile Pic Start*/
+.picture-container{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.picture{
+    width: 106px;
+    height: 106px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.picture:hover{
+    border-color: #2ca8ff;
+}
+.content.ct-wizard-green .picture:hover{
+    border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover{
+    border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover{
+    border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover{
+    border-color: #ff3b30;
+}
+.picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.picture-src{
+    width: 100%;
+    
+}
+/*Profile Pic End*/
 </style>
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -159,7 +209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                              <div class="col-12">
                               <div class="form-group">
                         <label for="username">Username</label>
-                                  <input type="text" class="form-control" id="username" name="username" placeholder="" >
+                                  <input type="text" class="form-control" id="username" name="username" placeholder="" required >
                               </div>
                            </div>
                              <div class="col-12">
@@ -178,13 +228,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                          <div class="row but m-0">
                             <div class="col-12">                                        
 				                    <button id="loginuser" class="btn-submit" data-toggle="modal---" data-target="#exampleModal" data-whatever="@getbootstrap">Login</button>
-                            <!-- <button id="myModalBTN" class="btn-submit" data-toggle="modal---" data-target="#exampleModal" data-whatever="@getbootstrap">Show Modal</button>
-                            <a style = "background-color: #808080; border-radius: 25px;" class="btn-explre  uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-close-outside3">Connect With Us</a> -->
                                 </div>
                          </div>
                      <div class="row">
                         <div class="col-12 pt-4 pb-4">
-                            <p class="text-center fsA">Don't have an account? <a href="https://socialprofilecard.com/signup-page" type="button" data-toggle="modal" data-target---1="#myModal">Create an account</a></p>
+                            <p class="text-center fsA">Don't have an account? <a href="https://socialprofilecard.com/pages/signup-page" type="button" data-toggle="modal" data-target---1="#myModal">Create an account</a></p>
                         </div>
                     </div>
 
@@ -198,27 +246,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- The Modal -->
  <div id="myModal" class="modal"> 
   <!-- Modal content -->
-   <div class="modal-content" style="margin :auto; background-color:rgb(255, 216, 41);">
-    <h2 class="text-center">Edit Profile</h2>
-    <label>Username</label> <input id="usernamea" type="text" disabled>  <br><br>
-    <label>Email</label> <input id="emaila" type="email" disabled>  <br><br>
-    <label>Password</label> <input id="passworda" type="password" disabled> <br><br>
+   <div class="modal-content" style="margin :auto; background-color:rgb(255, 129, 11);"> 
+      <h2 class="text-center">Edit Profile</h2> 
+      <!-- profile picture -->
+      <div class="container">
+        <div class="picture-container">
+            <div class="picture">
+                <img src="https://socialprofilecard.com/assets/profilepic.webp" class="picture-src" id="wizardPicturePreview" title="">
+                <input type="file" id="wizard-picture" class="">
+            </div>    
+        </div>
+    </div>
+      <label>Username</label> <input id="usernamea" type="text" disabled>  <br><br>
+      <label>Email</label> <input id="emaila" type="email" disabled>  <br><br>
+      <label>Password</label> <input id="passworda" type="password" disabled> <br><br>
       <label>FullName</label> <input id="FullName" type="text"> <br><br> 
       <label>Bio</label> <input id="Bio" type="text"> <br><br> 
-      <label>EmailAddress</label> <input id="EmailAddress" type="text"> <br><br> 
-      <label>PhoneNumber</label> <input id="PhoneNumber" type="text"> <br><br> 
-      <label>WhatsAppNumber</label> <input id="WhatsAppNumber" type="text"> <br><br> 
-      <label>Instagram</label> <input id="Instagram" type="text"> <br><br> 
-      <label>Snapchat</label> <input id="Snapchat" type="text"> <br><br> 
-      <label>TikTok</label> <input id="TikTok" type="text"> <br><br> 
-      <label>YouTube</label> <input id="YouTube" type="text"> <br><br> 
-      <label>Linkedin</label> <input id="Linkedin" type="text"> <br><br> 
-      <label>Twitter</label> <input id="Twitter" type="text"> <br><br> 
-      <label>Facebook</label> <input id="Facebook" type="text"> <br><br> 
-      <label>Telegram</label> <input id="Telegram" type="text"> <br><br> 
-      <label>Pinterest</label> <input id="Pinterest" type="text"> <br><br> 
+      <label>EmailAddress</label> <input id="EmailAddress" type="email"> <br><br> 
+      <label>PhoneNumber</label> <input id="PhoneNumber" type="tel"> <br><br> 
+      <label>WhatsAppNumber</label> <input id="WhatsAppNumber" type="tel"> <br><br> 
+      <label>Instagram</label> <input id="Instagram" type="url"> <br><br> 
+      <label>Snapchat</label> <input id="Snapchat" type="url"> <br><br> 
+      <label>TikTok</label> <input id="TikTok" type="url"> <br><br> 
+      <label>YouTube</label> <input id="YouTube" type="url"> <br><br> 
+      <label>Linkedin</label> <input id="Linkedin" type="url"> <br><br> 
+      <label>Twitter</label> <input id="Twitter" type="url"> <br><br> 
+      <label>Facebook</label> <input id="Facebook" type="url"> <br><br> 
+      <label>Telegram</label> <input id="Telegram" type="url"> <br><br> 
+      <label>Pinterest</label> <input id="Pinterest" type="url"> <br><br> 
+      <label>Reddit</label> <input id="Reddit" type="url"> <br><br> 
+      <label>Skype</label> <input id="Skype" type="url"> <br><br> 
+      <label>SoundCloud</label> <input id="SoundCloud" type="url"> <br><br> 
+      <label>Spotify</label> <input id="Spotify" type="url"> <br><br> 
       <label>Address</label> <input id="Address" type="text"> <br><br> 
-      <label>ExtraLink</label> <input id="ExtraLink" type="text"> <br><br> 
+      <label>ExtraLink</label> <input id="ExtraLink" type="url"> <br><br> 
       <button id="updatedata" type="button" class="btn btn-success btn-lg btn-block">Save</button>
 
   </div>
@@ -284,7 +345,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
    
-    <script type="module" src="authtomodal.js"></script> 
+    <script type="module" src="login.js"></script> 
     <script type="module" src="updateSPCdata.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

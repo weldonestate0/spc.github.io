@@ -43,11 +43,14 @@
                 var Facebook =  document.getElementById("Facebook").value;
                 var Telegram =  document.getElementById("Telegram").value;
                 var Pinterest =  document.getElementById("Pinterest").value;
+                var Reddit =  document.getElementById("Reddit").value;
+                var Skype =  document.getElementById("Skype").value;
+                var SoundCloud =  document.getElementById("SoundCloud").value;
+                var Spotify =  document.getElementById("Spotify").value;
                 var Address = document.getElementById("Address").value;
                 var ExtraLink = document.getElementById("ExtraLink").value; 
                 
                 update(ref(database, "users/"+ username),{
-                    //    UserID : user.uid, 
                        Username : username,
                        Email :  Email,
                        Password : Password ,
@@ -65,6 +68,10 @@
                        Facebook : Facebook ,
                        Telegram : Telegram ,
                        Pinterest : Pinterest ,
+                       Reddit : Reddit,
+                       Skype : Skype, 
+                       SoundCloud : SoundCloud,
+                       Spotify : Spotify,
                        Address : Address ,
                        ExtraLink : ExtraLink
 				})
@@ -72,10 +79,10 @@
                     logoutSPC();
                     var modal = document.getElementById("myModal");
                     modal.style.display = "none";
-					alert("Data Updated successfully");
+					// alert("Data Updated successfully");
 				})
 				.catch(()=>{
-					alert("Unsuccessfull, error"+error); 
+					// alert("Unsuccessfull, error"+error); 
 				});
             }
 
@@ -83,10 +90,10 @@
             function logoutSPC(){
                 signOut(auth).then(() => {
                     // Sign-out successful. 
-                    console.log('signed out successfully')
+                    // console.log('signed out successfully')
                    }).catch((error) => {
                      // An error happened. 
-                     console.log(error)
+                    //  console.log(error)
                    });
             }
 
