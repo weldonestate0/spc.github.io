@@ -78,7 +78,7 @@
                     if(snapshot.val().WhatsAppNumber !== ""){
                         $("#whatsAppLinkElement").show();
                     }
-                    if(snapshot.val().Instagram !== null){
+                    if(snapshot.val().Instagram !== ""){
                         $("#instagramLinkElement").show();
                     }
                     if(snapshot.val().Facebook !== ""){
