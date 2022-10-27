@@ -2,21 +2,20 @@
 		// <!-- Imports + Configurations -->
 	
 			// Import the functions you need from the SDKs you need
-			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"; 
-            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-            import {getDatabase, ref, get, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";  
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js"; 
+            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+            import {getDatabase, ref, get, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js";  
 			// TODO: Add SDKs for Firebase products that you want to use
 			// https://firebase.google.com/docs/web/setup#available-libraries
 		  
-			// Your web app's Firebase configuration
-			const firebaseConfig = {
-			  apiKey: "AIzaSyDBtLm1tsNrNXdwchPkHMbayF6mHRjbxU8",
-			  authDomain: "socialprofilecard.firebaseapp.com",
-			  projectId: "socialprofilecard",
-			  storageBucket: "socialprofilecard.appspot.com",
-			  messagingSenderId: "137917591206",
-			  appId: "1:137917591206:web:d0abb7d53c14c616424e67"
-			};
+            const firebaseConfig = {
+                apiKey: "AIzaSyB5NB5g_1TAvZvINU4o_KV1Q-Xp1k4OY0k",
+                authDomain: "socialprofilecard-fa7d1.firebaseapp.com",
+                projectId: "socialprofilecard-fa7d1",
+                storageBucket: "socialprofilecard-fa7d1.appspot.com",
+                messagingSenderId: "79332485464",
+                appId: "1:79332485464:web:5f68d9ba4c5f501f049d2d"
+              };
 			// Initialize Firebase
 			const app = initializeApp(firebaseConfig);  
             const auth = getAuth(app); 
@@ -43,7 +42,15 @@
                     var modal = document.getElementById("myModal");
                     modal.style.display = "block"; 
                     $("#wizard-picture").change(function(){
-                        readURL(this);
+                        if (typeof (this.files) != "undefined") {
+                            var size = parseFloat(this.files[0].size / (1024 * 1024)).toFixed(2); 
+                            if(size > 2) {
+                                alert('Please select image size less than 2 MB');
+                            }else{
+                                // alert('Success');
+                                readURL(this);
+                            }
+                        }
                     });
 
                     //get data on input fields

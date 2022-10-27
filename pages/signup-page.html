@@ -24,7 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="description" content="">
     <meta name="author" content="">
     
-        <title>Activation Page-Social Profile Card</title>
+        <title>Activation -Social Profile Card</title>
         <link rel="icon" type="image/png" sizes="64x64" href="https://socialprofilecard.com/assets/title-logo.webp">
 
         <!--    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/"> -->
@@ -113,6 +113,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 }
 /*Profile Pic End*/
+.labelclr{
+  color: #FFFFFF;
+  font-weight: bold;
+}
 </style>
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -232,7 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                          </div>
                      <div class="row">
                         <div class="col-12 pt-4 pb-4">
-                            <p class="text-center fsA">Already have an account? <a href="https://socialprofilecard.com/pages/login-page" type="button" data-toggle="modal" data-target---1="#myModal">Login</a></p>
+                            <p class="text-center fsA">Already have an account? <a href="https://socialprofilecard.com/pages/login-page.html" type="button" data-toggle="modal" data-target---1="#myModal">Login</a></p>
                         </div>
                     </div>
 
@@ -243,49 +247,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <div id="modaldiv">
-<!-- The Modal -->
- <div id="myModal" class="modal"> 
-  <!-- Modal content -->
-   <div class="modal-content" style="margin :auto; background-color:rgb(255, 216, 41);">
-      <h2 class="text-center">Edit Profile</h2>
-      <!-- profile picture -->
-      <div class="container">
-        <div class="picture-container">
-            <div class="picture">
-                <img src="https://socialprofilecard.com/assets/profilepic.webp" class="picture-src" id="wizardPicturePreview" title="">
-                <input type="file" id="wizard-picture" class="">
-            </div>    
-        </div>
+  <!-- The Modal -->
+   <div id="myModal" class="modal"> 
+    <!-- Modal content -->
+     <div class="modal-content" style="margin :auto; background-color:rgb(24, 22, 21);"> 
+        <h2 class="text-center labelclr">Edit Profile</h2> 
+        <!-- profile picture -->
+        <div class="container">
+          <div class="picture-container">
+              <div class="picture">
+                  <img src="https://socialprofilecard.com/assets/profilepic.webp" class="picture-src" id="wizardPicturePreview" title="">
+                  <input type="file" id="wizard-picture" class="">
+              </div>    
+          </div>
+      </div>
+      <label class="labelclr">Username</label> <input class="py-2" id="usernamea" type="text" disabled>  <br><br>
+      <label class="labelclr">Email</label> <input class="py-2" id="emaila" type="email" disabled>  <br><br>
+      <label class="labelclr">Password</label> <input class="py-2" id="passworda" type="password" disabled> <br><br>
+      <label class="labelclr">FullName</label> <input class="py-2" id="FullName" type="text"> <br><br> 
+      <label class="labelclr">Bio</label> <input class="py-2" id="Bio" type="text" placeholder="Hey there!"> <br><br> 
+      <label class="labelclr">EmailAddress</label> <input class="py-2" id="EmailAddress" type="email" placeholder="xyz@email.com"> <br><br> 
+      <label class="labelclr">PhoneNumber</label> <input class="py-2" id="PhoneNumber" type="tel" placeholder="+92 321 xxxxxxx"> <br><br> 
+      <label class="labelclr">WhatsAppNumber</label> <input class="py-2" id="WhatsAppNumber" type="tel" placeholder="+92 321 xxxxxxx"> <br><br> 
+      <label class="labelclr">Instagram</label> <input class="py-2" id="Instagram" type="url" placeholder="https://www.instagram.com/socialprofilecard/"> <br><br> 
+      <label class="labelclr">Snapchat</label> <input class="py-2" id="Snapchat" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">TikTok</label> <input class="py-2" id="TikTok" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">YouTube</label> <input class="py-2" id="YouTube" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Linkedin</label> <input class="py-2" id="Linkedin" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Twitter</label> <input class="py-2" id="Twitter" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Facebook</label> <input class="py-2" id="Facebook" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Telegram</label> <input class="py-2" id="Telegram" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Pinterest</label> <input class="py-2" id="Pinterest" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Reddit</label> <input class="py-2" id="Reddit" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Skype</label> <input class="py-2" id="Skype" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">SoundCloud</label> <input class="py-2" id="SoundCloud" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Spotify</label> <input class="py-2" id="Spotify" type="url" placeholder="https://"> <br><br> 
+      <label class="labelclr">Address</label> <input class="py-2" id="Address" type="text" placeholder="House No.1, Block-A, xyz"> <br><br> 
+      <label class="labelclr">ExtraLink</label> <input class="py-2" id="ExtraLink" type="url" placeholder="https://"> <br><br> 
+      <button id="updatedata" type="button" class="btn btn-success btn-lg btn-block">Save</button> 
+  
     </div>
-      <label>Username</label> <input id="usernamea" type="text" disabled>  <br><br>
-      <label>Email</label> <input id="emaila" type="email" disabled>  <br><br>
-      <label>Password</label> <input id="passworda" type="password" disabled> <br><br>
-      <label>FullName</label> <input id="FullName" type="text"> <br><br> 
-      <label>Bio</label> <input id="Bio" type="text"> <br><br> 
-      <label>EmailAddress</label> <input id="EmailAddress" type="email"> <br><br> 
-      <label>PhoneNumber</label> <input id="PhoneNumber" type="tel"> <br><br> 
-      <label>WhatsAppNumber</label> <input id="WhatsAppNumber" type="tel"> <br><br> 
-      <label>Instagram</label> <input id="Instagram" type="url"> <br><br> 
-      <label>Snapchat</label> <input id="Snapchat" type="url"> <br><br> 
-      <label>TikTok</label> <input id="TikTok" type="url"> <br><br> 
-      <label>YouTube</label> <input id="YouTube" type="url"> <br><br> 
-      <label>Linkedin</label> <input id="Linkedin" type="url"> <br><br> 
-      <label>Twitter</label> <input id="Twitter" type="url"> <br><br> 
-      <label>Facebook</label> <input id="Facebook" type="url"> <br><br> 
-      <label>Telegram</label> <input id="Telegram" type="url"> <br><br> 
-      <label>Pinterest</label> <input id="Pinterest" type="url"> <br><br> 
-      <label>Reddit</label> <input id="Reddit" type="url"> <br><br> 
-      <label>Skype</label> <input id="Skype" type="url"> <br><br> 
-      <label>SoundCloud</label> <input id="SoundCloud" type="url"> <br><br> 
-      <label>Spotify</label> <input id="Spotify" type="url"> <br><br> 
-      <label>Address</label> <input id="Address" type="text"> <br><br> 
-      <label>ExtraLink</label> <input id="ExtraLink" type="url"> <br><br> 
-      <button id="updatedata" type="button" class="btn btn-success btn-lg btn-block">Save</button>
+  
+  </div> 
   </div>
-
-</div> 
-</div>
-
 <div class="main_footer bg-blue">
     <footer class="container">
          <a href="https://api.whatsapp.com/send?phone=923218898616&text=Hi I am Interested in Spcial Profile Card and I need some assistance..." target="_blank" class="btm_fixed_whatsapp">  <img src="https://socialprofilecard.com/assets/WhatsAppStickyFooter.webp"  alt="Whatsapp " ></a>

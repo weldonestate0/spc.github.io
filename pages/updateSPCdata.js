@@ -9,15 +9,14 @@
 			// TODO: Add SDKs for Firebase products that you want to use
 			// https://firebase.google.com/docs/web/setup#available-libraries
 		  
-			// Your web app's Firebase configuration
-			const firebaseConfig = {
-			  apiKey: "AIzaSyDBtLm1tsNrNXdwchPkHMbayF6mHRjbxU8",
-			  authDomain: "socialprofilecard.firebaseapp.com",
-			  projectId: "socialprofilecard",
-			  storageBucket: "socialprofilecard.appspot.com",
-			  messagingSenderId: "137917591206",
-			  appId: "1:137917591206:web:d0abb7d53c14c616424e67"
-			};
+            const firebaseConfig = {
+                apiKey: "AIzaSyB5NB5g_1TAvZvINU4o_KV1Q-Xp1k4OY0k",
+                authDomain: "socialprofilecard-fa7d1.firebaseapp.com",
+                projectId: "socialprofilecard-fa7d1",
+                storageBucket: "socialprofilecard-fa7d1.appspot.com",
+                messagingSenderId: "79332485464",
+                appId: "1:79332485464:web:5f68d9ba4c5f501f049d2d"
+              };
 			// Initialize Firebase
 			const app = initializeApp(firebaseConfig);  
             const auth = getAuth(app); 
@@ -79,11 +78,10 @@
                     logoutSPC();
                     var modal = document.getElementById("myModal");
                     modal.style.display = "none";
-					 alert("Data Updated successfully");
+					// alert("Data Updated successfully");
 				})
 				.catch(()=>{
 					// alert("Unsuccessfull, error"+error); 
-                    alert("Data can't be updated due to some error.")
 				});
             }
 
