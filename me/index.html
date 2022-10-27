@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SPC</title>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFSXB27');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-241121367-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-241121367-1');
+    </script>
+    <meta name="google-site-verification" content="p4M2RnEe4SaKtVpcrg7VBle-5cWwkoLP2jni1vLQJd4" />
+        <title>Social Profile Card</title>
+        <link rel="icon" type="image/png" sizes="64x64" href="https://socialprofilecard.com/assets/title-logo.webp">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="skjdncnckas" />
@@ -1024,6 +1043,10 @@
         </noscript>
     </head>
     <body class="is-loading">
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFSXB27"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
             <symbol id="icon-901" viewBox="0 0 40 40">
                 <path
@@ -1232,7 +1255,7 @@
                         </div>
                     </div>
                     <div id="credits" class="icc-credits">
-                        <span><a href="https://socialprofilecard.com/pages/login-page.html">Edit Profile</a></span>
+                        <span><a href="https://socialprofilecard.com/pages/login-page">Edit Profile</a></span>
                     </div>
                 </div>
             </div>
@@ -2013,168 +2036,6 @@
                 onvisible.add("#buttons01", { style: "fade-left", speed: 1000, intensity: 6, delay: 0, stagger: 125, replay: false });
             })();
         </script>
-                <script type="module"">
-
-		// <!-- Imports + Configurations -->
-	
-			// Import the functions you need from the SDKs you need
-			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"; 
-            import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-            import {getDatabase, ref, get, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";  
-			// TODO: Add SDKs for Firebase products that you want to use
-			// https://firebase.google.com/docs/web/setup#available-libraries
-		  
-            const firebaseConfig = {
-                apiKey: "AIzaSyB5NB5g_1TAvZvINU4o_KV1Q-Xp1k4OY0k",
-                authDomain: "socialprofilecard-fa7d1.firebaseapp.com",
-                projectId: "socialprofilecard-fa7d1",
-                storageBucket: "socialprofilecard-fa7d1.appspot.com",
-                messagingSenderId: "79332485464",
-                appId: "1:79332485464:web:5f68d9ba4c5f501f049d2d"
-              };
-			// Initialize Firebase
-			const app = initializeApp(firebaseConfig);  
-            const auth = getAuth(app); 
-            const database = getDatabase(app);
-
-            $( document ).ready(function() {
-                // console.log( "ready!" );
-                getSPCData();
-            });
-
-            // Get User Data
-            function getSPCData(){                   
-                // References 
-            //var username = document.getElementById("username").value;
-				const dbref = ref(database); 
-				get(child(dbref, "users/" + "maan")).then((snapshot)=>{
-					if(snapshot.exists())
-					{
-                        document.getElementById("ProfilePicture").src = snapshot.val().ProfilePic;
-                        document.getElementById("text01").innerHTML = snapshot.val().FullName; 
-                        document.getElementById("text02").innerHTML = snapshot.val().Bio;
-                        var pnum = "tel:" + snapshot.val().PhoneNumber; 
-                        document.getElementById("MakeaCallLink").href = pnum; 
-                        var wanum = "https://wa.me/" + snapshot.val().WhatsAppNumber + "?text=Hey%20there!%20got%20your%20reference%20from%20your%20Social%20Profile%20Card.";
-                        document.getElementById("whatsAppLink").href = wanum;
-                        var emA = "mailto:" + snapshot.val().EmailAddress; 
-                        document.getElementById("emailLink").href = emA;
-                        document.getElementById("instagramLink").href = snapshot.val().Instagram;
-                        document.getElementById("facebookLink").href = snapshot.val().Facebook;
-                        document.getElementById("snapchatLink").href = snapshot.val().Snapchat;
-                        document.getElementById("tiktokLink").href = snapshot.val().TikTok;
-                        document.getElementById("youtubeLink").href = snapshot.val().YouTube;
-                        document.getElementById("twitterLink").href = snapshot.val().Twitter;
-                        document.getElementById("linkedinLink").href = snapshot.val().Linkedin;
-                        document.getElementById("pinterestLink").href = snapshot.val().Pinterest;
-                        document.getElementById("telegramLink").href = snapshot.val().Telegram;
-                        document.getElementById("soundCloudLink").href = snapshot.val().SoundCloud;
-                        document.getElementById("spotifyLink").href = snapshot.val().Spotify;
-                        document.getElementById("skypeLink").href = snapshot.val().Skype;
-                        document.getElementById("redditLink").href = snapshot.val().Reddit;
-                        var addressb = "Address: " + snapshot.val().Address;
-                        document.getElementById("addressa").innerHTML = addressb;
-                        document.getElementById("extraLink").href = snapshot.val().ExtraLink;
-                        // console.log(snapshot.val());
-                        // document.getElementById("usernamea").value = snapshot.val().Username;   0
-                        // document.getElementById("emaila").value = snapshot.val().Email;   0
-                        // document.getElementById("passworda").value = snapshot.val().Password;  0
-					    // console.log(snapshot.val().UserID);  
-                    if(snapshot.val().ProfilePic !== ""){
-                        $("#pp1").show();
-                    }
-                    if(snapshot.val().FullName  !== ""){
-                        $("#text01").show();
-                    }
-                    if(snapshot.val().Bio  !== ""){
-                        $("#text02").show();
-                    }
-                    if(snapshot.val().PhoneNumber !== ""){
-                        $("#MakeaCallLinkElement").show();
-                    }
-                    if(snapshot.val().WhatsAppNumber !== ""){
-                        $("#whatsAppLinkElement").show();
-                    }
-                    if(snapshot.val().Instagram !== null){
-                        $("#instagramLinkElement").show();
-                    }
-                    if(snapshot.val().Facebook !== ""){
-                        $("#facebookLinkElement").show();
-                    }
-                    if(snapshot.val().Snapchat !== ""){
-                        $("#snapchatLinkElement").show();
-                    }
-                    if(snapshot.val().TikTok !== ""){
-                        $("#tiktokLinkElement").show();
-                    }
-                    if(snapshot.val().YouTube !== ""){
-                        $("#youtubeLinkElement").show();
-                    }
-                    if(snapshot.val().Twitter !== ""){
-                        $("#twitterLinkElement").show();
-                    }
-                    if(snapshot.val().Linkedin !== ""){
-                        $("#linkedinLinkElement").show();
-                    }
-                    if(snapshot.val().Pinterest !== ""){
-                        $("#pinterestLinkElement").show();
-                    }
-                    if(snapshot.val().Telegram !== ""){
-                        $("#telegramLinkElement").show();
-                    }
-                    if(snapshot.val().EmailAddress !== ""){
-                        $("#emailLinkElement").show();
-                    }
-                    if(snapshot.val().SoundCloud !== ""){
-                        $("#soundCloudLinkElement").show();
-                    }
-                    if(snapshot.val().Spotify !== ""){
-                        $("#spotifyLinkElement").show();
-                    }
-                    if(snapshot.val().Skype !== ""){
-                        $("#skypeLinkElement").show();
-                    }
-                    if(snapshot.val().Reddit !== ""){
-                        $("#redditLinkElement").show();
-                    }
-                    if(snapshot.val().Address !== ""){
-                        $("#addressLinkElement").show();
-                    }
-                    if(snapshot.val().ExtraLink !== ""){
-                        $("#extraLinkElement").show();
-                    }
-
-
-
-					}
-					else{
-						alert("No Data Found.");
-					}
-				})
-				.catch((error)=>{ 
-                    // console.log("Unsuccessful, error:"+error);
-					// alert("Unsuccessful, error:"+error);
-				})
-            }
-
-
-            var picaddress;
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-            
-                    reader.onload = function (e) {
-                        $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-                    }
-                    reader.readAsDataURL(input.files[0]);
-                }
-                            reader.onloadend = function() {
-                            picaddress = reader.result;
-                            // console.log(picaddress); 
-                            updateDP();
-                         }
-            }
-
-</script>
+                <script type="module" src="gettinguserprofile.js"></script>
     </body>
 </html>
