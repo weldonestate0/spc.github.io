@@ -30,7 +30,7 @@
                 // References 
             //var username = document.getElementById("username").value;
 				const dbref = ref(database); 
-				get(child(dbref, "users/" + "moeez.lodhi")).then((snapshot)=>{
+				get(child(dbref, "users/" + "moeez_lodhi")).then((snapshot)=>{
 					if(snapshot.exists())
 					{
                         document.getElementById("ProfilePicture").src = snapshot.val().ProfilePic;
