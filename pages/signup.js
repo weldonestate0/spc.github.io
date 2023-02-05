@@ -40,8 +40,8 @@
                     }
                     else{
                 // References 
-                var usernamecap = document.getElementById("username").value;
-                var username = String(usernamecap).toLowerCase();
+                var username = document.getElementById("username").value.toLowerCase();
+                // var username = String(usernamecap).toLowerCase();
                 // var username = usernamecap.toString().toLowerCase();
                 // console.log(username);
                 var email = document.getElementById("email").value.toLowerCase();
