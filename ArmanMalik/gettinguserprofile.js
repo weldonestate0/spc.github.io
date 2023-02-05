@@ -36,7 +36,11 @@
             });
 
             // Get User Data
-            function getSPCData(){                   
+            function getSPCData(){       
+                const url = "https://socialprofilecard.com/users/hashim/";
+                const username = url.split("/").pop();
+                console.log(username); // Output: "hashim"
+            
                 // References 
             //var username = document.getElementById("username").value;
 				const dbref = ref(database); 
