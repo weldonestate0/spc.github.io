@@ -38,10 +38,10 @@
             // Get User Data
             function getSPCData(){       
                 const href = window.location.href;
-                console.log(href);
+                // console.log(href);
                 const segments = new URL(href).pathname.split('/');
                 const lastseg = segments.pop() || segments.pop(); // Handle potential trailing slash
-                console.log(lastseg);
+                // console.log(lastseg);
             
                 // References 
             //var username = document.getElementById("username").value;
