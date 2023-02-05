@@ -70,7 +70,7 @@
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     // ..
-                    // alert(errorMessage);
+                    alert(errorMessage);
                     //console.log(errorMessage);
                     });
                 }
@@ -117,7 +117,7 @@
 				})
 				.catch((error)=>{ 
                     //console.log("Unsuccessful, error:"+error);
-					// alert("Unsuccessful, error:"+error);
+					alert("Unsuccessful, error:"+error);
 				})
             }
 

@@ -40,14 +40,17 @@
                     }
                     else{
                 // References 
-var username = document.getElementById("username").value;
-var email = document.getElementById("email").value;
-var password = document.getElementById("password").value; 
-    createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-        // Signed in 
-     const user = userCredential.user;
-         // ...
+                var usernamecap = document.getElementById("username").value;
+                var username = String(usernamecap).toLowerCase();
+                // var username = usernamecap.toString().toLowerCase();
+                // console.log(username);
+                var email = document.getElementById("email").value.toLowerCase();
+                var password = document.getElementById("password").value; 
+                createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                const user = userCredential.user;
+                     // ...
          set(ref(database, 'users/' + username), {
            UserID : user.uid,
            Username : username,
@@ -104,14 +107,14 @@ var password = document.getElementById("password").value;
         })
     .catch((error) => {
       // The write failed...
-      //alert(error);
+      alert(error);
         });    
      })
     .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
-    // alert(errorMessage);
+     alert(errorMessage);
     });
 }
 }
@@ -119,7 +122,7 @@ var password = document.getElementById("password").value;
             // Get User Data
             function getSPCData(){                   
                 // References 
-            var username = document.getElementById("username").value;
+            var username = document.getElementById("username").value.toLowerCase();
 				const dbref = ref(database); 
 				get(child(dbref, "users/" + username)).then((snapshot)=>{
 					if(snapshot.exists())
@@ -156,7 +159,7 @@ var password = document.getElementById("password").value;
 				})
 				.catch((error)=>{ 
                     // console.log("Unsuccessful, error:"+error);
-					// alert("Unsuccessful, error:"+error);
+					 alert("Unsuccessful, error:"+error);
 				})
             }
 

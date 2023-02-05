@@ -152,7 +152,7 @@
 				})
 				.catch((error)=>{ 
                     // console.log("Unsuccessful, error:"+error);
-					// alert("Unsuccessful, error:"+error);
+					alert("Unsuccessful, error:"+error);
 				})
             }
 

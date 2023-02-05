@@ -91,7 +91,7 @@
 					// alert("Data Updated successfully");
 				})
 				.catch(()=>{
-					// alert("Unsuccessfull, error"+error); 
+					alert("Unsuccessfull, error"+error); 
 				});
             }
 
@@ -103,6 +103,7 @@
                    }).catch((error) => {
                      // An error happened. 
                     //  console.log(error)
+                    alert("Unsuccessfull, error"+error);
                    });
             }
 
