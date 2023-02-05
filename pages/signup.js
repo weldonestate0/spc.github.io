@@ -8,14 +8,24 @@
 			// TODO: Add SDKs for Firebase products that you want to use
 			// https://firebase.google.com/docs/web/setup#available-libraries
 		  
+            // const firebaseConfig = {
+            //     apiKey: "AIzaSyB5NB5g_1TAvZvINU4o_KV1Q-Xp1k4OY0k",
+            //     authDomain: "socialprofilecard-fa7d1.firebaseapp.com",
+            //     projectId: "socialprofilecard-fa7d1",
+            //     storageBucket: "socialprofilecard-fa7d1.appspot.com",
+            //     messagingSenderId: "79332485464",
+            //     appId: "1:79332485464:web:5f68d9ba4c5f501f049d2d"
+            //   };
+
             const firebaseConfig = {
-                apiKey: "AIzaSyB5NB5g_1TAvZvINU4o_KV1Q-Xp1k4OY0k",
-                authDomain: "socialprofilecard-fa7d1.firebaseapp.com",
-                projectId: "socialprofilecard-fa7d1",
-                storageBucket: "socialprofilecard-fa7d1.appspot.com",
-                messagingSenderId: "79332485464",
-                appId: "1:79332485464:web:5f68d9ba4c5f501f049d2d"
+                apiKey: "AIzaSyBn4EgG5c-84Vj5m4B0iA5J-BI8JfRJXyI",
+                authDomain: "spcusersdb.firebaseapp.com",
+                projectId: "spcusersdb",
+                storageBucket: "spcusersdb.appspot.com",
+                messagingSenderId: "592571191647",
+                appId: "1:592571191647:web:a6f242f7742a51babc66ea"
               };
+              
 			// Initialize Firebase
 			const app = initializeApp(firebaseConfig);  
             const auth = getAuth(app); 
