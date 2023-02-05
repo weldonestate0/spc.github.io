@@ -37,14 +37,16 @@
 
             // Get User Data
             function getSPCData(){       
-                const url = "https://socialprofilecard.com/users/hashim/";
-                const username = url.split("/").pop();
-                console.log(username); // Output: "hashim"
+                const href = window.location.href;
+                console.log(href);
+                const segments = new URL(href).pathname.split('/');
+                const lastseg = segments.pop() || segments.pop(); // Handle potential trailing slash
+                console.log(lastseg);
             
                 // References 
             //var username = document.getElementById("username").value;
 				const dbref = ref(database); 
-				get(child(dbref, "users/" + "maan")).then((snapshot)=>{
+				get(child(dbref, "users/" + lastseg)).then((snapshot)=>{
 					if(snapshot.exists())
 					{
                         document.getElementById("ProfilePicture").src = snapshot.val().ProfilePic;
