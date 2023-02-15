@@ -184,3 +184,7 @@
                          }
             }
 
+            
+
+                            // Assigning Events to the Buttons
+			document.getElementById("EditProfileBtn").addEventListener('click', valueSender); 
