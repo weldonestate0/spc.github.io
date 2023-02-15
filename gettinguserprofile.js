@@ -93,7 +93,7 @@
                     if(snapshot.val().ProfilePic !== ""){
                         $("#pp1").show();
                     }
-                    if(snapshot.val().ProfilePic == null){
+                    if(snapshot.val().ProfilePic == "undefined"){
                         $("#image01").hide();
                     }
                     if(snapshot.val().FullName  !== ""){
