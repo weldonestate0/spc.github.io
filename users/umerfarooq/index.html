@@ -1255,7 +1255,8 @@
                         </div>
                     </div>
                     <div id="credits" class="icc-credits">
-                        <span><a href="https://socialprofilecard.com/pages/login-page">Edit Profile</a></span>
+                        <!-- <a href="https://socialprofilecard.com/pages/login-page"></a> -->
+                        <span onclick="valueSender()">Edit Profile</span>
                     </div>
                 </div>
             </div>
@@ -2035,6 +2036,22 @@
                 onvisible.add("#text02", { style: "fade-up", speed: 1000, intensity: 2, delay: 250, staggerOrder: "", replay: false });
                 onvisible.add("#buttons01", { style: "fade-left", speed: 1000, intensity: 6, delay: 0, stagger: 125, replay: false });
             })();
+
+            function myFunctionxyz() {
+                alert("Hello! I am an alert box!!");
+                window.location.href = "https://socialprofilecard.com/pages/login-page";
+            }
+            
+            function valueSender()
+            {
+                const href = window.location.href;
+                // console.log(href);
+                const segments = new URL(href).pathname.split('/');
+                const lastseg = segments.pop() || segments.pop(); // Handle potential trailing slash
+                localStorage.setItem("myValue", lastseg);
+                window.location.href="https://socialprofilecard.com/pages/login-page";
+            }
+
         </script>
                 <script type="module" src="https://socialprofilecard.com/gettinguserprofile.js"></script>
     </body>
