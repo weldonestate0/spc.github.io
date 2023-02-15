@@ -94,7 +94,7 @@
                         $("#pp1").show();
                     }
                     if(snapshot.val().ProfilePic == ""){
-                        $("#pp1").hide();
+                        $("#image01").hide();
                     }
                     if(snapshot.val().FullName  !== ""){
                         $("#text01").show();
