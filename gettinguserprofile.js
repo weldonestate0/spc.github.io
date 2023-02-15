@@ -24,6 +24,16 @@
                 messagingSenderId: "592571191647",
                 appId: "1:592571191647:web:a6f242f7742a51babc66ea"
               };
+
+              function valueSender()
+              {
+                  const href = window.location.href;
+                  // console.log(href);
+                  const segments = new URL(href).pathname.split('/');
+                  const lastseg = segments.pop() || segments.pop(); // Handle potential trailing slash
+                  localStorage.setItem("myValue", lastseg);
+                  window.location.href="https://socialprofilecard.com/pages/login-page";
+              }
                 
 			// Initialize Firebase
 			const app = initializeApp(firebaseConfig);  
