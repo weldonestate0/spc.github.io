@@ -89,11 +89,12 @@
                         // document.getElementById("emaila").value = snapshot.val().Email;   0
                         // document.getElementById("passworda").value = snapshot.val().Password;  0
 					    // console.log(snapshot.val().UserID);  
-                    if(snapshot.val().ProfilePic == ""){
-                        $("#pp1").hide();
-                    }    
+                       
                     if(snapshot.val().ProfilePic !== ""){
                         $("#pp1").show();
+                    }
+                    if(snapshot.val().ProfilePic == ""){
+                        $("#pp1").hide();
                     }
                     if(snapshot.val().FullName  !== ""){
                         $("#text01").show();
