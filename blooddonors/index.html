@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Details</title>
+  </head>
+  <body>
+    <h1>User Details</h1>
+    <div id="user-cards"></div>
+    <script>
+      // Sample user data
+      const users = [
+        {
+          name: 'John Doe',
+          age: 30,
+          email: 'john.doe@example.com'
+        },
+        {
+          name: 'Jane Smith',
+          age: 25,
+          email: 'jane.smith@example.com'
+        },
+        {
+          name: 'Bob Johnson',
+          age: 40,
+          email: 'bob.johnson@example.com'
+        }
+      ];
+
+      // Create a new card for each user in the database
+      const userCardsContainer = document.getElementById('user-cards');
+      for (const user of users) {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+          <h2>${user.name}</h2>
+          <p>Age: ${user.age}</p>
+          <p>Email: ${user.email}</p>
+        `;
+        userCardsContainer.appendChild(card);
+      }
+    </script>
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </body>
+</html>
