@@ -63,6 +63,7 @@
             WhatsAppNumber : "",
             CNICNumber : "",
             Address : "", 
+            City : "",
             Group : ""
         })
         .then(() => {
@@ -126,7 +127,9 @@
                         document.getElementById("WhatsAppNumber").value = snapshot.val().WhatsAppNumber;
                         document.getElementById("CNICNumber").value = snapshot.val().CNICNumber;
                         document.getElementById("Address").value = snapshot.val().Address;
-                        document.getElementById("Group").value = snapshot.val().Group; 
+                        document.getElementById("Group").value = snapshot.val().Group;
+                        document.getElementById("City").value = snapshot.val().City;
+                        
 					// console.log(snapshot.val().UserID);  
 					}
 					else{

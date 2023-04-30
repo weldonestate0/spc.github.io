@@ -1,10 +1,66 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>User Details</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
   </head>
-  <body>
-    <h1>User Details</h1>
+  <body style="background-color: #feb209;">
+
+<div >
+  <a href="https://socialprofilecard.com/">
+  <p style="background-color: #fcb7218f; font-weight: bold; text-align: center; font-size: x-large; color: #990012;">Free Blood Bank</p>
+  </a>
+</div>
+
+
+    <div class="row container mt-1">
+      <div class="col-md-6">
+        <label for="select-city">Select City:</label>
+        <select class="form-control" id="select-city">
+          <option value="" selected>Choose City...</option>
+          <option value="new-york">New York</option>
+          <option value="los-angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <option value="houston">Houston</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="select-blood-group">Select Blood Group:</label>
+        <select class="form-control" id="select-blood-group">
+          <option value="" selected>Choose Blood Group...</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+
+      <div class="col-md-12 text-center mt-3">
+        <button class="btn btn-primary" type="button">Search a Donor</button>
+      </div>
+      <div class="col-md-12 text-center mt-3">
+        OR
+        <a href="https://socialprofilecard.com/blooddonors/signup" target="_self">Become a Donor</a>
+        <!-- <button class="btn btn-primary" type="button">Become a Donor</button> -->
+      </div>
+
+    </div>
+    <br>
+    <!-- <hr  style="color: black;">      -->
+
+
+
+
     <div id="user-cards"></div>
     <script>
       // Sample user data
@@ -32,10 +88,20 @@
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-          <h2>${user.name}</h2>
-          <p>Age: ${user.age}</p>
-          <p>Email: ${user.email}</p>
-        `;
+
+          <div class="media">
+          <div class="media-body">
+            <h5 class="mt-1"><strong>Name: </strong> ${user.name}</h5>
+              <p><strong>Age: </strong>  ${user.age} y/o</p>
+              <p><strong>Blood Group: </strong> AB+</p>
+              <p><strong>Gender: </strong> Male</p>
+              <p><strong>City: </strong> New York</p>
+              <p><strong>Phone Number: </strong> ${user.email}</p>
+              <p class="mb-0"><strong>WhatsApp Number: </strong> 555-5678</p>
+          </div>
+          <img class="align-self-center mr-1 rounded-circle" src="demopic.jpg" alt="Profile Picture" width="150" height="150">
+          </div>
+          `;
         userCardsContainer.appendChild(card);
       }
     </script>
@@ -46,5 +112,11 @@
         margin-bottom: 10px;
       }
     </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>

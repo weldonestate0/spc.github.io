@@ -29,6 +29,7 @@
                 var CNICNumber = document.getElementById("CNICNumber").value;
                 var Address = document.getElementById("Address").value;
                 var Group = document.getElementById("Group").value; 
+                var City = document.getElementById("City").value; 
                 
                 
                 update(ref(database, "users/blooddonors/"+ username),{
@@ -42,6 +43,7 @@
                        WhatsAppNumber : WhatsAppNumber,
                        CNICNumber : CNICNumber,
                        Address : Address ,
+                       City : City,
                        Group : Group
 				})
 				.then(()=>{ 
@@ -58,6 +60,9 @@
             //Logout with Email and Password 
             function logoutSPC(){
                 signOut(auth).then(() => {
+                    document.getElementById("username").value == "" ;
+                    document.getElementById("email").value == "" ;
+                    document.getElementById("password").value == "" ;
                     // Sign-out successful. 
                     // console.log('signed out successfully')
                    }).catch((error) => {
