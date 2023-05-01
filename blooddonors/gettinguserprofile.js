@@ -69,7 +69,7 @@
                 const blooddonatepic = document.getElementById("blooddonatepic");
 
                 if(document.getElementById("Group").value=="" || document.getElementById("City").value==""){
-                  console.log("hello");
+                  alert("Select City and Blood Group first.")
                 }
                 else{
 
