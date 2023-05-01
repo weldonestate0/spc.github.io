@@ -31,10 +31,10 @@
             const auth = getAuth(app); 
             const database = getDatabase(app);
 
-            $( document ).ready(function() {
-                // console.log( "ready!" );
-                getSPCData();
-            });
+            // $( document ).ready(function() {
+            //     // console.log( "ready!" );
+            //     getSPCData();
+            // });
 
             // Get User Data
             // function getSPCData(){       
@@ -64,8 +64,15 @@
             function getSPCData() {       
                 const dbref = ref(database); 
                 const usersRef = child(dbref, "users/blooddonors/");
-                const userCardsContainer = document.getElementById('user-cards');
+                const userCardsContainer = document.getElementById('user-cards'); 
                 userCardsContainer.innerHTML = '';
+                const blooddonatepic = document.getElementById("blooddonatepic");
+
+                if(document.getElementById("Group").value=="" || document.getElementById("City").value==""){
+                  console.log("hello");
+                }
+                else{
+
                 get(usersRef).then((snapshot) => {
                   if (snapshot.exists()) {
                     snapshot.forEach((childSnapshot) => {
@@ -89,8 +96,13 @@
           <img id="ProfilePicture" class="align-self-center mr-1 rounded-circle" src="${childSnapshot.val().ProfilePic}" alt="Profile Picture" width="150" height="150">
           </div>
           `;
-        userCardsContainer.appendChild(card);
+                    userCardsContainer.appendChild(card);           
+                    blooddonatepic.remove();
                        
+                    }
+                    else{
+                      userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
+                      blooddonatepic.remove();
                     }
 
                     });
@@ -98,7 +110,7 @@
                 })
                 .catch((error) => { 
                   alert("Unsuccessful, error: " + error);
-                });
+                });}
               }
               
 
