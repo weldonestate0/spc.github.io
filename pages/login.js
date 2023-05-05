@@ -122,7 +122,7 @@
             }
 
 
-            var picaddress;
+            let picaddress;
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
@@ -139,11 +139,11 @@
                          }
             }
 
-            //Update Email and Password 
+            //Update Profile Pic
             function updateDP(){
                 // Refereces
                 var ProfilePicAdd = picaddress;
-                var username = document.getElementById("username").value;    
+                var username = document.getElementById("username").value.toString().toLowerCase();    
                 update(ref(database, "users/"+ username),{
                     //    UserID : user.uid, 
                        ProfilePic: ProfilePicAdd
@@ -156,7 +156,6 @@
                     alert("Can't update profile picture. Please contact us on WhatsApp.")
 				});
             }
-
             
                 // Assigning Events to the Buttons
 			loginuser.addEventListener('click', loginSPCUser); 

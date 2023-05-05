@@ -96,7 +96,7 @@
             }
 
 
-            var picaddress;
+            let picaddress;
             function readURL(input) {
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
@@ -113,12 +113,12 @@
                          }
             }
 
-            //Update Email and Password 
+            //Update Profile Pic
             function updateDP(){
                 // Refereces
                 var ProfilePicAdd = picaddress;
-                var username = document.getElementById("username").value;    
-                update(ref(database, "users/"+ username),{
+                var username = document.getElementById("username").value.toString().toLowerCase();    
+                update(ref(database, "users/blooddonors/"+ username),{
                     //    UserID : user.uid, 
                        ProfilePic: ProfilePicAdd
 				})
