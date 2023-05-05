@@ -78,8 +78,9 @@
                     snapshot.forEach((childSnapshot) => {
                     //   console.log(childSnapshot.val().FullName);
                         
-                    if(childSnapshot.val().Group == document.getElementById("Group").value && childSnapshot.val().City == document.getElementById("City").value){
+                    if(childSnapshot.val().City == document.getElementById("City").value && childSnapshot.val().Group == document.getElementById("Group").value){
                         // console.log(childSnapshot.val().FullName); 
+                        console.log("hello");
                         const card = document.createElement('div');
                         card.classList.add('card');
                         card.innerHTML = `
@@ -97,13 +98,17 @@
           </div>
           `;
                     userCardsContainer.appendChild(card);           
-                    blooddonatepic.remove();
-                       
-                    }
-                    else{
-                      userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
+                    if (blooddonatepic) {
                       blooddonatepic.remove();
                     }
+                    
+                       
+                    }
+                    // else{
+                    //   // userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
+                    //   // blooddonatepic.remove();
+                    //   alert("No Donor Found");
+                    // }
 
                     });
                   }
