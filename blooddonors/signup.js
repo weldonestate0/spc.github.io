@@ -64,6 +64,7 @@
             CNICNumber : "",
             Address : "", 
             City : "",
+            ProfilePic: "https://socialprofilecard.com/assets/profilepic.webp",
             Group : ""
         })
         .then(() => {

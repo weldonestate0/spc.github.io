@@ -65,7 +65,7 @@
                 const dbref = ref(database); 
                 const usersRef = child(dbref, "users/blooddonors/");
                 const userCardsContainer = document.getElementById('user-cards'); 
-                
+                userCardsContainer.innerHTML = '';
                 const blooddonatepic = document.getElementById("blooddonatepic");
 
                 if(document.getElementById("Group").value=="" || document.getElementById("City").value==""){
@@ -77,38 +77,32 @@
                   if (snapshot.exists()) {
                     snapshot.forEach((childSnapshot) => {
                     //   console.log(childSnapshot.val().FullName);
-                    userCardsContainer.innerHTML = '';
+                        
                     if(childSnapshot.val().Group == document.getElementById("Group").value && childSnapshot.val().City == document.getElementById("City").value){
                         // console.log(childSnapshot.val().FullName); 
                         const card = document.createElement('div');
                         card.classList.add('card');
                         card.innerHTML = `
-                        <div class="media">
-                        <div class="media-body">
-                        <h5 id="FullName" class="mt-1"><strong>Name: </strong> ${childSnapshot.val().FullName}</h5>
-                        <p id="Age" ><strong>Age: </strong> ${childSnapshot.val().Age} y/o</p>
-                        <p id="group" ><strong>Blood Group: </strong> ${childSnapshot.val().Group}</p>
-                        <p id="Gender" ><strong>Gender: </strong> ${childSnapshot.val().Gender}</p>
-                        <p id="city"><strong>City: </strong> ${childSnapshot.val().City}</p>
-                        <p id="PhoneNumber"><strong>Phone Number: </strong> ${childSnapshot.val().PhoneNumber}</p>
-                        <p id="WhatsAppNumber" class="mb-0"><strong>WhatsApp Number: </strong> ${childSnapshot.val().WhatsAppNumber}</p>
-                        </div>
-                        <img id="ProfilePicture" class="align-self-center mr-1 rounded-circle" src="${childSnapshot.val().ProfilePic}" alt="Profile Picture" width="150" height="150">
-                        </div>
-                        `;
+          <div class="media">
+          <div class="media-body">
+            <h5 id="FullName" class="mt-1"><strong>Name: </strong> ${childSnapshot.val().FullName}</h5>
+              <p id="Age" ><strong>Age: </strong> ${childSnapshot.val().Age} y/o</p>
+              <p id="group" ><strong>Blood Group: </strong> ${childSnapshot.val().Group}</p>
+              <p id="Gender" ><strong>Gender: </strong> ${childSnapshot.val().Gender}</p>
+              <p id="city"><strong>City: </strong> ${childSnapshot.val().City}</p>
+              <p id="PhoneNumber"><strong>Phone Number: </strong> ${childSnapshot.val().PhoneNumber}</p>
+              <p id="WhatsAppNumber" class="mb-0"><strong>WhatsApp Number: </strong> ${childSnapshot.val().WhatsAppNumber}</p>
+          </div>
+          <img id="ProfilePicture" class="align-self-center mr-1 rounded-circle" src="${childSnapshot.val().ProfilePic}" alt="Profile Picture" width="150" height="150">
+          </div>
+          `;
                     userCardsContainer.appendChild(card);           
-                    if (blooddonatepic) {
-                      blooddonatepic.remove();
-                    }
-                    
+                    blooddonatepic.remove();
                        
                     }
                     else{
-                      if (blooddonatepic) {
-                        blooddonatepic.remove();
-                      }
                       userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
-                       
+                      blooddonatepic.remove();
                     }
 
                     });
