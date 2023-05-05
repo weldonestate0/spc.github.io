@@ -36,32 +36,10 @@
             //     getSPCData();
             // });
 
-            // Get User Data
-            // function getSPCData(){       
 
-			// 	const dbref = ref(database); 
-			// 	get(child(dbref, "users/blooddonors/" + "xxx")).then((snapshot)=>{
-			// 		if(snapshot.exists())
-			// 		{
-            //             document.getElementById("ProfilePicture").src = snapshot.val().ProfilePic;
-            //             document.getElementById("FullName").innerHTML ="<strong>Name: </strong>"+ snapshot.val().FullName;
-            //             console.log(snapshot.val().FullName); 
-            //             document.getElementById("Age").innerHTML ="<strong>Age: </strong> "+ snapshot.val().Age +"y/o";
-            //             document.getElementById("Group").innerHTML ="<strong>Blood Group: </strong> "+  snapshot.val().Group;
-            //             document.getElementById("Gender").innerHTML ="<strong>Gender: </strong> "+  snapshot.val().Gender;
-            //             document.getElementById("City").innerHTML ="<strong>City: </strong> "+  snapshot.val().City;
-            //             document.getElementById("PhoneNumber").innerHTML ="<strong>Phone Number: </strong> "+  snapshot.val().PhoneNumber;
-            //             document.getElementById("WhatsAppNumber").innerHTML ="<strong>WhatsApp Number:</strong> "+  snapshot.val().WhatsAppNumber;
-			// 		}
-					
-			// 	})
-			// 	.catch((error)=>{ 
-            //         // console.log("Unsuccessful, error:"+error);
-			// 		alert("Unsuccessful, error:"+error);
-			// 	})
-            // }
-
-            function getSPCData() {       
+            function getSPCData() {     
+              document.getElementById("loadera").style.display = "block";
+  
                 const dbref = ref(database); 
                 const usersRef = child(dbref, "users/blooddonors/");
                 const userCardsContainer = document.getElementById('user-cards'); 
@@ -70,6 +48,7 @@
                 let donorFound = false; // to keep track of whether a donor has been found or not
 
                 if(document.getElementById("Group").value=="" || document.getElementById("City").value==""){
+                  document.getElementById("loadera").style.display = "none";
                   alert("Select City and Blood Group first.")
                 }
                 else{
@@ -102,6 +81,7 @@
                       blooddonatepic.remove();
                     }
                     donorFound = true;
+                    document.getElementById("loadera").style.display = "none";
                        
                     }
                     });
@@ -111,6 +91,7 @@
                     // userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
                       // blooddonatepic.remove();
                       if (blooddonatepic) {
+                        document.getElementById("loadera").style.display = "none";
                         userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
                         blooddonatepic.remove();
                       }
