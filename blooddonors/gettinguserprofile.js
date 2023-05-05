@@ -84,8 +84,8 @@
                         const card = document.createElement('div');
                         card.classList.add('card');
                         card.innerHTML = `
-          <div class="media">
-          <div class="media-body">
+          <div class="media" style="background-color: #353541; color:#f9f9f9;">
+          <div class="media-body ml-2">
             <h5 id="FullName" class="mt-1"><strong>Name: </strong> ${childSnapshot.val().FullName}</h5>
               <p id="Age" ><strong>Age: </strong> ${childSnapshot.val().Age} y/o</p>
               <p id="group" ><strong>Blood Group: </strong> ${childSnapshot.val().Group}</p>
