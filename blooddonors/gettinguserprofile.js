@@ -67,6 +67,7 @@
                 const userCardsContainer = document.getElementById('user-cards'); 
                 userCardsContainer.innerHTML = '';
                 const blooddonatepic = document.getElementById("blooddonatepic");
+                let donorFound = false; // to keep track of whether a donor has been found or not
 
                 if(document.getElementById("Group").value=="" || document.getElementById("City").value==""){
                   alert("Select City and Blood Group first.")
@@ -79,8 +80,7 @@
                     //   console.log(childSnapshot.val().FullName);
                         
                     if(childSnapshot.val().City == document.getElementById("City").value && childSnapshot.val().Group == document.getElementById("Group").value){
-                        // console.log(childSnapshot.val().FullName); 
-                        console.log("hello");
+                        // console.log(childSnapshot.val().FullName);
                         const card = document.createElement('div');
                         card.classList.add('card');
                         card.innerHTML = `
@@ -101,16 +101,19 @@
                     if (blooddonatepic) {
                       blooddonatepic.remove();
                     }
-                    
+                    donorFound = true;
                        
                     }
-                    // else{
-                    //   // userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
-                    //   // blooddonatepic.remove();
-                    //   alert("No Donor Found");
-                    // }
-
                     });
+                  }
+                  if(!donorFound) {
+                    // alert("No Donor Found");
+                    // userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
+                      // blooddonatepic.remove();
+                      if (blooddonatepic) {
+                        userCardsContainer.innerHTML = '<br><br><h2 style="text-align: center; color: #f9f9f9;">No Donor Available</h2>';
+                        blooddonatepic.remove();
+                      }
                   }
                 })
                 .catch((error) => { 
