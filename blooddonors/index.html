@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Blood Donors -Social Profile Card</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="https://socialprofilecard.com/assets/title-logo.webp">
+    <style>
+      .loader {
+        position: fixed;
+        z-index: 9999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #353541;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        background-color: #202123; /* add a semi-transparent white background */
+      }
+      
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @media screen and (max-width: 480px) {
+  .loader {
+    width: 50px;
+    height: 50px;
+  }
+}
+      </style>
+      
+  </head>
+  <body style="background-color: #202123;">
+
+<div >
+  <a href="https://socialprofilecard.com/">
+  <p style="background-color: #353541; font-weight: bold; text-align: center; font-size: x-large; color: #f9f9f9;">Free Blood Bank</p>
+  </a>
+</div>
+
+
+    <div class="row container mt-1">
+      <div class="col-md-6">
+        <label style="color: #f9f9f9;" for="City">Select City:</label>
+        <select style="background-color: #353541; color: #f9f9f9;" class="form-control" id="City">
+          <option value="" disabled selected>Select City</option>
+          <option value="Abbottabad">Abbottabad</option>
+  <option value="Abdul Hakim">Abdul Hakim</option>
+  <option value="Ahmadpur East">Ahmadpur East</option>
+  <option value="Aliabad">Aliabad</option>
+  <option value="Alpurai">Alpurai</option>
+  <option value="Athmuqam">Athmuqam</option>
+  <option value="Attock City">Attock City</option>
+  <option value="Attock Khurd">Attock Khurd</option>
+  <option value="Awaran">Awaran</option>
+  <option value="Badin">Badin</option>
+  <option value="Bagh">Bagh</option>
+  <option value="Bahawalnagar">Bahawalnagar</option>
+  <option value="Bahawalpur">Bahawalpur</option>
+  <option value="Bannu">Bannu</option>
+  <option value="Barkhan">Barkhan</option>
+  <option value="Batgram">Batgram</option>
+  <option value="Bhalwal">Bhalwal</option>
+  <option value="Bhakkar">Bhakkar</option>
+  <option value="Chakwal">Chakwal</option>
+  <option value="Charsadda">Charsadda</option>
+  <option value="Chaman">Chaman</option>
+  <option value="Chandigarh">Chandigarh</option>
+  <option value="Chenab Nagar">Chenab Nagar</option>
+  <option value="Chilas">Chilas</option>
+  <option value="Chiniot">Chiniot</option>
+  <option value="Chishtian">Chishtian</option>
+  <option value="Chitral">Chitral</option>
+  <option value="Chunian">Chunian</option>
+  <option value="Dadu">Dadu</option>
+  <option value="Daggar">Daggar</option>
+  <option value="Dainyor">Dainyor</option>
+  <option value="Dalbandin">Dalbandin</option>
+  <option value="Dargai">Dargai</option>
+  <option value="Dasu">Dasu</option>
+  <option value="Dera Allahyar">Dera Allahyar</option>
+  <option value="Dera Bugti">Dera Bugti</option>
+  <option value="Dera Ghazi Khan">Dera Ghazi Khan</option>
+  <option value="Dera Ismail Khan">Dera Ismail Khan</option>
+  <option value="Dera Murad Jamali">Dera Murad Jamali</option>
+  <option value="Dera Nakha">Dera Nakha</option>
+  <option value="Diamer">Diamer</option>
+  <option value="Dipalpur">Dipalpur</option>
+  <option value="Faisalabad">Faisalabad</option>
+  <option value="Gakuch">Gakuch</option>
+  <option value="Gandava">Gandava</option>
+  <option value="Ghotki">Ghotki</option>
+  <option value="Gilgit">Gilgit</option>
+  <option value="Gojra">Gojra</option>
+  <option value="Gujranwala">Gujranwala</option>
+  <option value="Gujrat">Gujrat</option>
+  <option value="Gwadar">Gwadar</option>
+  <option value="Hafizabad">Hafizabad</option>
+  <option value="Hangu">Hangu</option>
+  <option value="Haripur">Haripur</option>
+  <option value="Harunabad">Harunabad</option> 
+  <option value="Hasilpur">Hasilpur</option> 
+  <option value="Hassan Abdal">Hassan Abdal</option> 
+  <option value="Haveli Lakha">Haveli Lakha</option> 
+  <option value="Hingorja">Hingorja</option> 
+  <option value="Hujra Shah Muqim">Hujra Shah Muqim</option> 
+  <option value="Hyderabad City">Hyderabad City</option> 
+  <option value="Islamabad">Islamabad</option> 
+  <option value="Jacobabad">Jacobabad</option> 
+  <option value="Jalalpur Jattan">Jalalpur Jattan</option> 
+  <option value="Jamshoro">Jamshoro</option> 
+  <option value="Jaranwala">Jaranwala</option> 
+  <option value="Jhang City">Jhang City</option> 
+  <option value="Jhelum">Jhelum</option> 
+  <option value="Kabirwala">Kabirwala</option> 
+  <option value="Kahror Pakka">Kahror Pakka</option>
+  <option value="Kalat">Kalat</option> 
+  <option value="Kamalia">Kamalia</option> 
+  <option value="Kandhkot">Kandhkot</option> 
+  <option value="Karachi">Karachi</option> 
+  <option value="Karak">Karak</option> 
+  <option value="Kasur">Kasur</option> 
+  <option value="Khairpur Mir’s">Khairpur Mir’s</option> 
+  <option value="Khanewal">Khanewal</option> 
+  <option value="Khanpur">Khanpur</option> 
+  <option value="Kharian">Kharian</option> 
+  <option value="Khushab">Khushab</option>
+  <option value="Khuzdar">Khuzdar</option> 
+  <option value="Kohat">Kohat</option> 
+  <option value="Kohlu">Kohlu</option>
+  <option value="Kot Addu">Kot Addu</option>
+  <option value="Kotli">Kotli</option> 
+  <option value="Kulachi">Kulachi</option> 
+  <option value="Kundian">Kundian</option> 
+  <option value="Lahore">Lahore</option> 
+  <option value="Lakki">Lakki</option> 
+  <option value="Lala Musa">Lala Musa</option> 
+  <option value="Larkana">Larkana</option> 
+  <option value="Lasbela">Lasbela</option> 
+  <option value="Leiah">Leiah</option> 
+  <option value="Lodhran">Lodhran</option> 
+  <option value="Lower Dir">Lower Dir</option> 
+  <option value="Mandi Bahauddin">Mandi Bahauddin</option> 
+  <option value="Mandi Burewala">Mandi Burewala</option> 
+  <option value="Mansehra">Mansehra</option> 
+  <option value="Mardan">Mardan</option>
+  <option value="Mastung">Mastung</option> 
+  <option value="Matiari">Matiari</option> 
+  <option value="Mian Channun">Mian Channun</option> 
+  <option value="Mianwali">Mianwali</option> 
+  <option value="Mirpur Khas">Mirpur Khas</option> 
+  <option value="Multan">Multan</option> 
+  <option value="Musa Khel Bazar">Musa Khel Bazar</option>
+  <option value="Muzaffarabad">Muzaffarabad</option>
+  <option value="Muzaffargarh">Muzaffargarh</option>
+  <option value="Nankana Sahib">Nankana Sahib</option>
+  <option value="Narowal">Narowal</option>
+  <option value="Naushahro Firoz">Naushahro Firoz</option>
+  <option value="New Mirpur">New Mirpur</option>
+  <option value="Nowshera">Nowshera</option>
+  <option value="Okara">Okara</option>
+  <option value="Pakpattan">Pakpattan</option>
+  <option value="Panjgur">Panjgur</option>
+  <option value="Parachinar">Parachinar</option>
+  <option value="Pasrur">Pasrur</option>
+  <option value="Peshawar">Peshawar</option>
+  <option value="Pishin">Pishin</option>
+  <option value="Quetta">Quetta</option>
+  <option value="Rahimyar Khan">Rahimyar Khan</option>
+  <option value="Rajanpur">Rajanpur</option>
+  <option value="Rawalpindi">Rawalpindi</option>
+  <option value="Rawala Kot">Rawala Kot</option>
+  <option value="Risalpur Cantonment">Risalpur Cantonment</option>
+  <option value="Saddiqabad">Saddiqabad</option>
+  <option value="Sahiwal">Sahiwal</option>
+  <option value="Saidu Sharif">Saidu Sharif</option>
+  <option value="Samundri">Samundri</option>
+  <option value="Sanghar">Sanghar</option>
+  <option value="Sargodha">Sargodha</option>
+  <option value="Shahdad Kot">Shahdad Kot</option>
+  <option value="Shakargarh">Shakargarh</option>
+  <option value="Shekhupura">Shekhupura</option>
+  <option value="Shikarpur">Shikarpur</option>
+  <option value="Shujaabad">Shujaabad</option>
+  <option value="Sialkot City">Sialkot City</option>
+  <option value="Sibi">Sibi</option>
+  <option value="Sukkur">Sukkur</option>
+  <option value="Swabi">Swabi</option>
+  <option value="Tando Allahyar">Tando Allahyar</option>
+  <option value="Tando Muhammad Khan">Tando Muhammad Khan</option>
+  <option value="Tank">Tank</option>
+  <option value="Thatta">Thatta</option>
+  <option value="Timargara">Timargara</option>
+  <option value="Toba Tek Singh">Toba Tek Singh</option>
+  <option value="Umarkot">Umarkot</option>
+  <option value="Upper Dir">Upper Dir</option>
+  <option value="Uthal">Uthal</option>
+  <option value="Vihari">Vihari</option>
+  <option value="Zhob">Zhob</option>
+  <option value="Ziarat">Ziarat</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label style="color: #f9f9f9;" for="Group">Select Blood Group:</label>
+        <select style="background-color: #353541; color: #f9f9f9;" class="form-control" id="Group">
+          <option value="" disabled selected>Select Blood Group</option>
+        <option value="A positive (A+)">A positive (A+)</option>
+        <option value="A negative (A-)">A negative (A-)</option>
+        <option value="B positive (B+)">B positive (B+)</option>
+        <option value="B negative (B-)">B negative (B-)</option>
+        <option value="O positive (O+)">O positive (O+)</option>
+        <option value="O negative (O-)">O negative (O-)</option>
+        <option value="AB positive (AB+)">AB positive (AB+)</option>
+        <option value="AB negative (AB-)">AB negative (AB-)</option>
+        </select>
+      </div>
+
+      <div class="col-md-12 text-center mt-3">
+        <button style="background-color: #353541; color: #f9f9f9;" id="resultsbtn" class="btn px-4" type="button">Search a Donor</button>
+      </div>
+      <div style="color: #f9f9f9;" class="col-md-12 text-center mt-3">
+        OR
+        <a style="color: #feb209; font-weight: bolder;" href="https://socialprofilecard.com/blooddonors/signup" target="_self">Become a Donor</a>
+        <!-- <button class="btn btn-primary" type="button">Become a Donor</button> -->
+      </div>
+
+    </div>
+    <br>
+    <!-- <hr  style="color: black;">      -->
+
+
+    <div id="blooddonatepic" style="text-align: center;">
+    <img src="blooddonatepic.png" alt="Blood Donation Image" style="width:350px;">
+    </div>
+
+    <div id="user-cards"></div>
+    <div style="display: none;" id="loadera" class="loader"></div>
+
+    <style>
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px #353541;
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="module" src="gettinguserprofile.js"></script>
+  </body>
+</html>
